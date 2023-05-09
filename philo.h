@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmagrevesse <emmagrevesse@student.42.f    +#+  +:+       +#+        */
+/*   By: egrevess <egrevess@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 12:10:41 by emmagrevess       #+#    #+#             */
-/*   Updated: 2023/05/09 12:14:04 by emmagrevess      ###   ########.fr       */
+/*   Updated: 2023/05/09 15:19:59 by egrevess         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ typedef struct s_struct
 	int				enough_eating;
 	int				limit_meal;
 	int				index;
+	int				i;
 	atomic_int		mutex;
 	atomic_int		stop;
 	atomic_int		dead;
@@ -55,7 +56,6 @@ typedef struct s_struct
 	pthread_mutex_t	mutex_check;
 	pthread_mutex_t	mutex_dead;
 	t_thread		*threads;
-	pthread_t		threads_dead;
 }					t_struct;
 
 int			ft_atoi(const char *str, int *check);

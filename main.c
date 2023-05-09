@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmagrevesse <emmagrevesse@student.42.f    +#+  +:+       +#+        */
+/*   By: egrevess <egrevess@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 11:36:51 by emmagrevess       #+#    #+#             */
-/*   Updated: 2023/05/09 12:15:36 by emmagrevess      ###   ########.fr       */
+/*   Updated: 2023/05/09 15:04:34 by egrevess         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ static void	ft_init_threads(t_struct *s, t_thread *thread, int i)
 {
 	thread->num = i + 1;
 	thread->nb_eat = 0;
+	thread->limit = 0;
 	thread->time_last_meal = s->start_time;
 	if (i == s->nb_philo - 1)
 		thread->fork_right = &s->forks[0];
@@ -103,8 +104,7 @@ static int	ft_init_routine(t_struct *s)
 		}
 		i++;
 	}
-	pthread_create(&s->threads_dead,
-		NULL, ft_check_not_dead, s);
+	ft_check_not_dead(s);
 	return (0);
 }
 

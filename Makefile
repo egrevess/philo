@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: emmagrevesse <emmagrevesse@student.42.f    +#+  +:+       +#+         #
+#    By: egrevess <egrevess@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/22 11:08:49 by emmagrevess       #+#    #+#              #
-#    Updated: 2023/05/09 12:08:54 by emmagrevess      ###   ########.fr        #
+#    Updated: 2023/05/09 15:43:50 by egrevess         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ OBJECT = $(SRCS:.c=.o)
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 
 $(NAME): $(OBJECT)
 

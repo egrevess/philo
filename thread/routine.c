@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   routine.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmagrevesse <emmagrevesse@student.42.f    +#+  +:+       +#+        */
+/*   By: egrevess <egrevess@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 13:11:46 by emmagrevess       #+#    #+#             */
-/*   Updated: 2023/05/09 12:13:53 by emmagrevess      ###   ########.fr       */
+/*   Updated: 2023/05/09 15:39:36 by egrevess         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ void	*ft_routine(void *arg)
 		if (philo->s->nb_philo == 1)
 		{
 			pthread_mutex_unlock(philo->fork_left);
-			ft_msg("is dead", philo);
-			philo->s->dead = 1;
 			return ((void *) 1);
 		}
 		pthread_mutex_lock(philo->fork_right);
