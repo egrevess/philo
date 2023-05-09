@@ -6,11 +6,11 @@
 /*   By: emmagrevesse <emmagrevesse@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 12:24:02 by emmagrevess       #+#    #+#             */
-/*   Updated: 2023/03/22 12:32:16 by emmagrevess      ###   ########.fr       */
+/*   Updated: 2023/05/08 18:21:57 by emmagrevess      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../philo.h"
+#include "../philo.h"
 
 int	ft_atoi(const char *str, int *check)
 {
